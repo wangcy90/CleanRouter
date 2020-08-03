@@ -1,0 +1,16 @@
+PODS:
+  - CleanRouter (1.0.0)
+
+DEPENDENCIES:
+  - CleanRouter (from `../`)
+
+EXTERNAL SOURCES:
+  CleanRouter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CleanRouter: 2046c9200364ff27f86dc5c7317ea7d6c57d452d
+
+PODFILE CHECKSUM: 661110cfe07ab31de4a3cb9d36713357773fd9dd
+
+COCOAPODS: 1.9.3

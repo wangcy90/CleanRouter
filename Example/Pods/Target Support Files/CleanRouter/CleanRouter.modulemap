@@ -1,0 +1,6 @@
+framework module CleanRouter {
+  umbrella header "CleanRouter-umbrella.h"
+
+  export *
+  module * { export * }
+}
