@@ -59,5 +59,10 @@ class ViewController: UIViewController {
         DemoTarget.test2(title: "aaa").present()
     }
     
+    @IBAction func perform(_ sender: Any) {
+        let success = DemoTarget.test1(title: "aaa").perform()
+        debugPrint(success)
+    }
+    
 }
 

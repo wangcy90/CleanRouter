@@ -34,17 +34,22 @@ public protocol RoutableTarget {
 public extension RoutableTarget {
     
     var viewController: UIViewController? {
-        return CleanRouter.route(self)
+        CleanRouter.route(self)
     }
     
     @discardableResult
     func push(animated: Bool = true) -> Bool {
-        return CleanRouter.push(self, animated: animated)
+        CleanRouter.push(self, animated: animated)
     }
     
     @discardableResult
-    func present(animated: Bool = true, completion: (() -> Void)? = nil) -> Bool {
-        return CleanRouter.present(self, animated: animated, completion: completion)
+    func present(animated: Bool = true, completion: (() -> ())? = nil) -> Bool {
+        CleanRouter.present(self, animated: animated, completion: completion)
+    }
+    
+    @discardableResult
+    func perform() -> Bool {
+        CleanRouter.perform(self)
     }
     
 }

@@ -13,16 +13,16 @@
 
 import Foundation
 
-struct Invoker {
+struct Invoker<T> {
     
-    private let handler: (Context) -> UIViewController?
+    private let handler: (Context) -> T?
     
-    init(handler: @escaping (Context) -> UIViewController?) {
+    init(handler: @escaping (Context) -> T?) {
         self.handler = handler
     }
     
-    func invoke(with context: Context) -> UIViewController? {
-        return handler(context)
+    func invoke(with context: Context) -> T? {
+        handler(context)
     }
     
 }

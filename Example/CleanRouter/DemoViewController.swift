@@ -30,6 +30,12 @@ struct DemoModule {
             return UINavigationController(rootViewController: vc)
         }
         
+        CleanRouter.handle(DemoRoutePath.test1) {
+            let title = $0.parameters["title"] as? String
+            debugPrint(title ?? "nil")
+            return true
+        }
+        
     }
     
 }

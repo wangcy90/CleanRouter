@@ -28,7 +28,15 @@ public extension CleanRouter {
     }
     
     static func route(_ target: RoutableTarget) -> UIViewController? {
-        return router.route(url: target.path.value, parameters: target.parameters ?? [:])
+        router.route(url: target.path.value, parameters: target.parameters ?? [:])
+    }
+    
+    static func handle(_ path: RoutePath, handler: @escaping (Context) -> Bool) {
+        router.handle(url: path.value, handler: handler)
+    }
+    
+    static func perform(_ target: RoutableTarget) -> Bool {
+        router.perform(url: target.path.value, parameters: target.parameters ?? [:])
     }
     
     @discardableResult
